@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>upd погода</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/weather_cards.css"/>
+    <link rel="stylesheet" href="css/general.css"/>
+    <script type="text/javascript" src="js/loading.js"></script>
+    <script type="text/javascript" src="js/geo.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/storage.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="root flex_between" style="">
+         <h1>Погода здесь</h1>
+         <div class="update_all_button only_desktop">Обновить данные</div>
+         <div class="update_all_button only_mobile" >↺</div>
+      </div>
+
+      <div class="root flex_between">
+        <div class="weather__card">
+          <h3>City name</h3>
+          <div class="current_weather_main flex_between">
+            <img src="img/loading.gif"/>
+            <span>temp</span>
+          </div>
+        </div>
+        <div class="card__body weather__card">
+          <ul class="card__params">
+            <li>
+              <span><b>Ветер</b></span>
+              <span></span>
+              <img class="img__loading" src="img/loading.gif"/>
+            </li>
+            <li>
+              <span><b>Облачность</b></span>
+              <span></span>
+              <img class="img__loading" src="img/loading.gif"/>
+            </li>
+            <li>
+              <span><b>Давление</b></span>
+              <span></span>
+              <img class="img__loading" src="img/loading.gif"/>
+            </li>
+            <li>
+              <span><b>Влажность</b></span>
+              <span></span>
+              <img class="img__loading" src="img/loading.gif"/>
+            </li>
+            <li>
+              <span><b>Координаты</b></span>
+              <span></span>
+              <img class="img__loading" src="img/loading.gif"/>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="root flex_between" style="">
+        <h2>Избранное</h2>
+        <div id="add_city_button" >
+          <input id="add_city_input" type="text" class="some_button" placeholder="Добавить новый город..." />
+          <div id="add_city_button_click" class="button_delete"><div><b>+</b></div></div>
+        </div>
+      </div>
+
+      <div class="root flex_between" style="justify-content: space-around">
+
+        <ul class="weather__list_cards flex_between">
+
+          <!-- <li class="weather__card">
+            <div class="card__header flex_between">
+              <h3>Москва</h3>
+              <div class="card__weather_temp">
+                <img src="img/weather_card_icon.png"/>
+                <text>temp</text>
+              </div>
+              <div class="button_delete">
+                <div>x</div>
+              </div>
+            </div>
+            <div class="card__body">
+              <ul class="card__params">
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="weather__card">
+            <div class="card__header flex_between">
+              <h3>Дублин</h3>
+              <div class="card__weather_temp">
+                <img src="img/weather_card_icon.png"/>
+                <text>temp</text>
+              </div>
+              <div class="button_delete">
+                <div>x</div>
+              </div>
+            </div>
+            <div class="card__body">
+              <ul class="card__params">
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="weather__card">
+            <div class="card__header flex_between">
+              <h3>Токио</h3>
+              <div class="card__weather_temp">
+                <img src="img/weather_card_icon.png"/>
+                <text>temp</text>
+              </div>
+              <div class="button_delete">
+                <div>x</div>
+              </div>
+            </div>
+            <div class="card__body">
+              <ul class="card__params">
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+                <li>
+                  <span>param name</span>
+                  <span>param value</span>
+                  <img class="img__loading" src="img/loading.gif"/>
+                </li>
+              </ul>
+            </div>
+          </li> -->
+        </ul>
+
+      </div>
+    </main>
+  </body>
+</html>

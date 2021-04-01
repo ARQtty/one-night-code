@@ -1,0 +1,58 @@
+.weather__card {
+  margin: 10px;
+  width: 45%;
+}
+.card__header > h3 {
+  font-size: 16pt;
+}
+.weather__list_cards {
+  width: 100%;
+}
+ul {
+  padding: 0px;
+}
+li {
+  list-style-type: none;
+  padding: 0px;
+}
+.card__header {
+  margin: 5px;
+  padding: 5px;
+  padding-left: 0px;
+}
+.card__header > div > img {
+  width: 30px;
+}
+.card__body {
+  margin: 5px;
+}
+
+.card__weather_temp {
+  display: flex;
+  align-items: center;
+  font-size: 19pt;
+  color: #697E83;
+  float: right;
+}
+
+.card__params > li {
+  background-color: #A7AFB1;
+  color: #F3FBFD;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.current_weather_main {
+  justify-content: flex-start !important;
+}
+.current_weather_main > span {
+  margin: 20px;
+  font-size: 60pt;
+  color: #697E83;
+}
+.current_weather_main > img {
+  width: 120px;
+}

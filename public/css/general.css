@@ -1,0 +1,79 @@
+#add_city_button {
+  display: flex;
+  margin-right: 18px;
+}
+.img__loading {
+  width: 15px;
+  height: 15px;
+  display: none;
+}
+.some_button {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eee;
+  margin-right: 5px;
+  padding-left: 15px;
+}
+.update_all_button{
+  padding: 10px 25px;
+  background-color: #C1CCD1;
+  color: #697E83;
+  border: none;
+  border-radius: 5px;
+  font-size: 11pt;
+}
+.button_delete {
+  background-color: #6F8087;
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  color: #E4EEF1;
+  position: relative;
+}
+.button_delete > div{
+  position: absolute;
+  top: 19%;
+  left: 38%;
+}
+.only_desktop {
+  display: block;
+}
+.only_mobile {
+  opacity: 0.0;
+  margin-right: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+  h1, h2 {
+    margin-left: 5px !important;
+  }
+
+  header {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  .weather__card {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .only_mobile {
+    opacity: 1.0;
+    font-size: 30pt;
+  }
+  .only_desktop {
+    display: none;
+  }
+
+  #add_city_button {
+    width: 100%;
+    margin-left: 5px;
+  }
+  #add_city_input {
+    width: 86%;
+  }
+}
